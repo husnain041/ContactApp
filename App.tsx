@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import {
+  Alert,
   Linking,
   Pressable,
   SafeAreaView,
@@ -99,7 +100,9 @@ function App() {
   const [projectOffset, setProjectOffset] = useState(0);
 
   const openLink = (url: string) => {
-    Linking.openURL(url).catch(() => null);
+    Linking.openURL(url).catch(() => {
+      Alert.alert('Unable to open link', 'Please try again later.');
+    });
   };
 
   return (
@@ -121,7 +124,7 @@ function App() {
             <Pressable
               onPress={() => openLink('https://github.com/husnain041')}
               style={[styles.button, styles.secondaryButton]}>
-              <Text style={styles.secondaryButtonText}>Download Resume</Text>
+              <Text style={styles.secondaryButtonText}>View GitHub</Text>
             </Pressable>
           </View>
         </View>
