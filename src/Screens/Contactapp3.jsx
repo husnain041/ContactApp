@@ -66,9 +66,6 @@ const Contactapp3 = () => {
                 <Text style={{ fontSize: 17 }}>{item.contactFirstName} {item.contactLastName}</Text>
                 <Text>{item?.contactNumber}</Text>
               </TouchableOpacity>
-              <TouchableOpacity onPress={() => handleEdit(index)} style={{ backgroundColor: '#007AFF', padding: 10, borderRadius: 10, marginRight: 5 }}>
-                <Text style={{ color: 'white' }}>Edit</Text>
-              </TouchableOpacity>
               <TouchableOpacity style={{ marginTop: 10, alignItems: 'center', borderRadius: 20, backgroundColor: '#2d606d', padding: 10 }}
                 onPress={() => deleteContact(item.contactNumber)}>
                 <Text style={{ color: 'red' }}>Delete</Text>
